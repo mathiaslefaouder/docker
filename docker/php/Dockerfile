@@ -1,7 +1,7 @@
 FROM php:8.1-fpm
 
 RUN apt update \
-    && apt install -y zlib1g-dev g++ git libicu-dev zip libpq-dev libzip-dev zip postgresql \
+    && apt install -y zlib1g-dev g++ git libicu-dev zip libpq-dev libzip-dev zip postgresql npm nodejs \
     && docker-php-ext-install intl pgsql pdo_pgsql \
     && pecl install apcu \
     && docker-php-ext-enable apcu \
